@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gavrilkov | Änderungsschneiderei Eckernförde</title>
+<meta name="description" content="Änderungsschneiderei Gavrilkov in Eckernförde. Informieren Sie sich über Leistungen und Kontaktmöglichkeiten.">
+<style>
+:root{--bg:#f7f4ee;--dark:#171714;--gold:#d9b775}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#191919}
+header{background:var(--dark);color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font: bold 23px Georgia,serif;color:var(--gold);letter-spacing:1px}
+nav{display:flex;gap:7px;flex-wrap:wrap}
+button,a{font:inherit;cursor:pointer}
+nav button{background:transparent;border:0;color:white;padding:10px 8px}
+nav button:hover{color:var(--gold)}
+.page{display:none}
+.page.active{display:block}
+.hero{background:linear-gradient(120deg,#171714,#383025);color:white;padding:90px 8%;min-height:420px;display:flex;align-items:center}
+.hero-inner{max-width:750px}
+.eyebrow{font-size:12px;letter-spacing:3px;color:#d9b775;font-weight:bold}
+h1,h2{font-family:Georgia,serif;font-weight:normal}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:20px 0}
+h2{font-size:clamp(30px,5vw,44px);margin:15px 0}
+p{line-height:1.75}
+.hero p{max-width:570px;color:#e6e1d8}
+.btn{display:inline-block;background:var(--gold);border:1px solid var(--gold);border-radius:30px;color:#171714;padding:14px 22px;margin:12px 8px 0 0;font-weight:bold;text-decoration:none}
+.btn.alt{background:transparent;color:var(--gold)}
+section{padding:65px 8%}
+.center{text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:30px}
+.card{background:white;border:1px solid #e8e1d5;border-radius:13px;padding:25px;text-align:left}
+button.card{width:100%;color:#191919}
+button.card:hover{border-color:#c6a363;transform:translateY(-2px)}
+.card h3{font-size:21px;margin:12px 0}
+.card p{font-size:14px;color:#666}
+.symbol{font-size:30px;color:#b38c4b}
+.more{color:#977039;font-weight:bold;font-size:14px}
+.dark{background:#171714;color:white}
+.dark p{color:#d0ccc4}
+.detail{min-height:55vh}
+.contact{background:white;padding:25px;border:1px solid #e8e1d5;border-radius:12px}
+footer{background:#111;color:#bbb;padding:30px 6%;text-align:center}
+footer button{background:none;border:0;color:var(--gold);padding:10px}
+.small{font-size:12px;color:#777}
+@media(max-width:600px){
+ header{padding:18px 5%}
+ nav{width:100%;gap:2px}
+ nav button{font-size:13px;padding:9px 6px}
+ .hero{padding:65px 6%;min-height:390px}
+ section{padding:48px 6%}
+ .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">✂ GAVRILKOV</div>
+<nav>
+<button onclick="showPage('home')">Start</button>
+<button onclick="showPage('services')">Leistungen</button>
+<button onclick="showPage('about')">Über uns</button>
+<button onclick="showPage('contact')">Kontakt</button>
+</nav>
+</header>
+
+<main>
+<div id="home" class="page active">
+<div class="hero">
+<div class="hero-inner">
+<div class="eyebrow">ÄNDERUNGSSCHNEIDEREI · ECKERNFÖRDE</div>
+<h1>Ihre Kleidung.<br><span style="color:#d9b775">Ihr Stil.</span></h1>
+<p>Willkommen bei der Änderungsschneiderei Gavrilkov. Entdecken Sie unser Angebot und sprechen Sie Ihre Änderungswünsche persönlich mit uns ab.</p>
+<button class="btn" onclick="showPage('services')">Leistungen entdecken →</button>
+<button class="btn alt" onclick="showPage('contact')">Kontakt aufnehmen</button>
+</div>
+</div>
+
+<section>
+<div class="center">
+<div class="eyebrow">UNSER ANGEBOT</div>
+<h2>Was dürfen wir für Sie tun?</h2>
+<p>Wählen Sie eine Kategorie für weitere Informationen.</p>
+</div>
+<div class="grid">
+<button class="card" onclick="showPage('hosen')"><div class="symbol">✂</div><h3>Hosenänderungen</h3><p>Fragen Sie nach möglichen Anpassungen.</p><span class="more">Mehr erfahren →</span></button>
+<button class="card" onclick="showPage('kleider')"><div class="symbol">◇</div><h3>Kleider</h3><p>Besprechen Sie Ihre individuellen Wünsche.</p><span class="more">Mehr erfahren →</span></button>
+<button class="card" onclick="showPage('jacken')"><div class="symbol">♧</div><h3>Jacken & Mäntel</h3><p>Fragen Sie nach möglichen Änderungen.</p><span class="more">Mehr erfahren →</span></button>
+<button class="card" onclick="showPage('repair')"><div class="symbol">⌁</div><h3>Reparaturen</h3><p>Fragen Sie nach Reparaturmöglichkeiten.</p><span class="more">Mehr erfahren →</span></button>
+</div>
+</section>
+
+<section class="dark">
+<div class="eyebrow">PERSÖNLICH FÜR SIE DA</div>
+<h2>Handwerk mit Liebe zum Detail.</h2>
+<p>Besprechen Sie Ihre Änderungswünsche direkt mit der Schneiderei.</p>
+<button class="btn" onclick="showPage('contact')">Kontakt & Anfahrt →</button>
+</section>
+</div>
+
+<div id="services" class="page">
+<section>
+<div class="eyebrow">UNSER ANGEBOT</div>
+<h2>Unsere Leistungen</h2>
+<p>Wählen Sie eine Kategorie. Das konkrete Angebot bitte vor Veröffentlichung mit dem Betrieb abgleichen.</p>
+<div class="grid">
+<button class="card" onclick="showPage('hosen')"><h3>Hosenänderungen →</h3><p>Informationen zu Anpassungen.</p></button>
+<button class="card" onclick="showPage('kleider')"><h3>Kleider →</h3><p>Individuelle Änderungswünsche.</p></button>
+<button class="card" onclick="showPage('jacken')"><h3>Jacken & Mäntel →</h3><p>Nach Möglichkeiten fragen.</p></button>
+<button class="card" onclick="showPage('repair')"><h3>Reparaturen →</h3><p>Informationen zu Näharbeiten.</p></button>
+</div>
+<button class="btn alt" onclick="showPage('home')">← Zur Startseite</button>
+</section>
+</div>
+
+<div id="hosen" class="page detail"><section><div class="eyebrow">LEISTUNGEN</div><h2>Hosenänderungen</h2><p>Sie möchten Ihre Hose anpassen lassen? Fragen Sie direkt nach, welche Änderungen möglich sind.</p><button class="btn" onclick="showPage('contact')">Kontakt aufnehmen →</button><button class="btn alt" onclick="showPage('services')">← Zurück</button></section></div>
+
+<div id="kleider" class="page detail"><section><div class="eyebrow">LEISTUNGEN</div><h2>Kleider</h2><p>Besprechen Sie gewünschte Änderungen an Ihren Kleidungsstücken persönlich mit der Schneiderei.</p><button class="btn" onclick="showPage('contact')">Kontakt aufnehmen →</button><button class="btn alt" onclick="showPage('services')">← Zurück</button></section></div>
+
+<div id="jacken" class="page detail"><section><div class="eyebrow">LEISTUNGEN</div><h2>Jacken & Mäntel</h2><p>Erkundigen Sie sich nach individuellen Anpassungen für Ihre Kleidungsstücke.</p><button class="btn" onclick="showPage('contact')">Kontakt aufnehmen →</button><button class="btn alt" onclick="showPage('services')">← Zurück</button></section></div>
+
+<div id="repair" class="page detail"><section><div class="eyebrow">LEISTUNGEN</div><h2>Reparaturen</h2><p>Sie benötigen eine Reparatur? Kontaktieren Sie die Schneiderei und besprechen Sie Ihr Anliegen.</p><button class="btn" onclick="showPage('contact')">Kontakt aufnehmen →</button><button class="btn alt" onclick="showPage('services')">← Zurück</button></section></div>
+
+<div id="about" class="page">
+<section class="dark">
+<div class="eyebrow">ÜBER UNS</div>
+<h2>Änderungsschneiderei Gavrilkov</h2>
+<p>Besprechen Sie Ihre Änderungswünsche persönlich mit dem Betrieb. Weitere Informationen können nach Rücksprache ergänzt werden.</p>
+<button class="btn" onclick="showPage('contact')">Kontakt →</button>
+<button class="btn alt" onclick="showPage('home')">← Startseite</button>
+</section>
+</div>
+
+<div id="contact" class="page">
+<section>
+<div class="eyebrow">KONTAKT</div>
+<h2>So erreichen Sie uns</h2>
+<p>Bitte prüfen Sie Telefonnummer und Adresse vor der Veröffentlichung.</p>
+<div class="grid">
+<div class="contact"><h3>Telefon</h3><p>04351 486684</p><a class="btn" href="tel:+494351486684">Jetzt anrufen</a></div>
+<div class="contact"><h3>Adresse</h3><p>Kieler Straße 63<br>24340 Eckernförde</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kieler+Strasse+63+24340+Eckernfoerde" target="_blank" rel="noopener">Route planen ↗</a></div>
+</div>
+<p class="small">Öffnungszeiten bitte beim Betrieb erfragen. Impressum und Datenschutzerklärung vor Veröffentlichung ergänzen.</p>
+<button class="btn alt" onclick="showPage('home')">← Zur Startseite</button>
+</section>
+</div>
+</main>
+
+<footer>
+<div class="logo">GAVRILKOV</div>
+<p>Änderungsschneiderei · Eckernförde</p>
+<button onclick="showPage('home')">Startseite</button>
+<button onclick="showPage('services')">Leistungen</button>
+<button onclick="showPage('contact')">Kontakt</button>
+<p class="small">Demo-Webseite – Angaben vor Veröffentlichung bestätigen.</p>
+</footer>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(function(p){
+    p.classList.remove('active');
+  });
+  var page=document.getElementById(id);
+  if(page){page.classList.add('active');window.scrollTo(0,0);}
+}
+</script>
+</body>
+</html>
